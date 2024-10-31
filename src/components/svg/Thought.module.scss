@@ -1,0 +1,37 @@
+.thought {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: anim 4s linear infinite forwards;
+  path {
+    stroke: var(--color);
+    stroke-opacity: 0.9;
+    stroke-width: 16;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+@keyframes anim {
+  0% {
+    // stroke-dashoffset: 1000;
+    stroke-dasharray: 150;
+  }
+
+  15% {
+    // stroke-dashoffset: 500;
+    stroke-dasharray: 250;
+  }
+
+  30% {
+    // stroke-dashoffset: 0;
+    stroke-dasharray: 500;
+  }
+
+  40% {
+    stroke-dasharray: 1000;
+  }
+
+  100% {
+    // stroke-dashoffset: 0;
+  }
+}

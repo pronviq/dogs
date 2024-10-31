@@ -1,0 +1,47 @@
+.text {
+  display: grid;
+  width: 100%;
+  color: rgb(60, 73, 92);
+  grid-template-columns: 70px 1fr 25px;
+  grid-template-rows: 1fr;
+  position: relative;
+  padding: 0 4px 0 4px;
+}
+
+.text_info {
+  font-size: 16px;
+  font-family: cursive;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: calc(100%);
+  font-family: cursive;
+  color: var(--edit-color);
+  outline: none;
+  border: none;
+  &:active {
+    outline: none;
+    border: none;
+  }
+  &:focus {
+    outline: none;
+    border: none;
+    background-color: rgba(173, 216, 230, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+}
+
+.edit {
+  height: 24px;
+  width: 24px;
+  border: none;
+  background-color: white;
+  padding: 4px;
+  --edit-color: rgba(100, 116, 139, 0.6);
+  &:hover {
+    cursor: pointer;
+    --edit-color: rgb(68, 83, 105, 1);
+    scale: 1.1;
+  }
+}

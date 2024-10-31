@@ -1,0 +1,30 @@
+.doglooking {
+  path {
+    stroke: var(--color);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-opacity: 0.9;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 400;
+    animation: anim 4s linear forwards infinite;
+  }
+}
+
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  20% {
+    stroke-dashoffset: 400;
+  }
+
+  40% {
+    stroke-dashoffset: 800;
+  }
+
+  100% {
+    stroke-dashoffset: 800;
+  }
+}

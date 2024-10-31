@@ -1,0 +1,31 @@
+.heart {
+  fill: none;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: anim 4s linear infinite forwards;
+
+  path {
+    stroke: red;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+}
+
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 60;
+    fill: none;
+  }
+
+  15% {
+    stroke-dashoffset: 30;
+  }
+
+  30% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

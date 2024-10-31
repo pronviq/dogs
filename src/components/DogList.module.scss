@@ -1,0 +1,11 @@
+.doglist {
+  width: 600px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  gap: 14px;
+  margin: 20px auto 0 auto;
+  position: relative;
+}
