@@ -14,8 +14,6 @@ const InfoLine: React.FC<IInfoLine> = ({ title, desc }) => {
   const [isEditing, setEditing] = useState<boolean>(false);
 
   const switchEditing = () => {
-    console.log("switching", inputRef.current);
-
     setEditing(true);
     setTimeout(() => {
       inputRef.current.focus();

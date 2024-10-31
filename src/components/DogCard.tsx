@@ -8,6 +8,7 @@ import TrashSvg from "./svg/TrashSvg";
 import LikeSvg from "./svg/LikeSvg";
 import store from "@/store/Store";
 import InfoLine from "./InfoLine";
+import Handler from "@/utils/Handler";
 
 interface IDog {
   dog: DogApiResponse;
@@ -37,8 +38,8 @@ const DogCard: React.FC<IDog> = ({ dog, duration, index }) => {
             </Typography>
 
             <InfoLine desc={dogInfo.life_span} title="Lifetime:" />
-            <InfoLine desc={dogInfo.height.metric + " cm"} title="Height:" />
-            <InfoLine desc={dogInfo.weight.metric + " kg"} title="Weight:" />
+            <InfoLine desc={Handler.getHeight(dogInfo.height.metric)} title="Height:" />
+            <InfoLine desc={Handler.getWeight(dogInfo.weight.metric)} title="Weight:" />
           </CardContent>
           <footer className={styles.footer}>
             <button

@@ -17,7 +17,7 @@ export function buildPlugins(options: BuildOptions): Configuration["plugins"] {
     new HtmlWebpackPlugin({ template: options.path.html }),
     new DotenvWebpackPlugin({
       path: path.resolve(options.path.src, "..", ".env"),
-      safe: true,
+      safe: false,
     }),
   ];
 

@@ -24,8 +24,10 @@ class Store {
 
   public async fetchDogs() {
     try {
-      this.isLoading = true;
-      this.page += 1;
+      runInAction(() => {
+        this.isLoading = true;
+        this.page += 1;
+      });
       const response: AxiosResponse<DogApiResponse[]> = await $api.get("/", {
         params: {
           page: this.page,
@@ -39,7 +41,9 @@ class Store {
     } catch (error) {
       console.log(error);
     } finally {
-      this.isLoading = false;
+      runInAction(() => {
+        this.isLoading = false;
+      });
     }
   }
 }
